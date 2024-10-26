@@ -1,0 +1,54 @@
+I'll help you install MySQL on Fedora 39. Here's the step-by-step process:
+
+1. First, add the MySQL repository:
+```bash
+sudo dnf install https://repo.mysql.com/mysql80-community-release-fc39-1.noarch.rpm
+```
+
+2. Import the MySQL GPG key:
+```bash
+sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
+```
+
+3. Install MySQL server:
+```bash
+sudo dnf install mysql-community-server
+```
+
+4. Start the MySQL service:
+```bash
+sudo systemctl start mysqld
+```
+
+5. Enable MySQL to start on boot:
+```bash
+sudo systemctl enable mysqld
+```
+
+6. Get the temporary root password (MySQL generates one automatically):
+```bash
+sudo grep 'temporary password' /var/log/mysqld.log
+```
+
+7. Secure your MySQL installation:
+```bash
+sudo mysql_secure_installation
+```
+During this step, you'll:
+- Set a new root password
+- Remove anonymous users
+- Disable root login remotely
+- Remove test database
+- Reload privilege tables
+
+8. To verify MySQL is running:
+```bash
+sudo systemctl status mysqld
+```
+
+9. To connect to MySQL:
+```bash
+mysql -u root -p
+```
+
+Would you like me to explain any of these steps in more detail?
