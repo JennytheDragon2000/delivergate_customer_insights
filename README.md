@@ -2,7 +2,7 @@
 
 This project implements a data engineering solution that imports customer and order data from CSV files into a MySQL database and provides a Streamlit web application for data visualization and analysis.
 
-[![Watch the Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/LHMqQTu_aRU)
+[![Watch the Video](https://img.youtube.com/vi/LHMqQTu_aRU/0.jpg)](https://youtu.be/LHMqQTu_aRU)
 
 ## Prerequisites
 
